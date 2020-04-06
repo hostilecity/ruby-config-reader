@@ -18,10 +18,16 @@ production:
 
 > You can use any arbitrary environment names
 
-
-### Example usage:
+- Install the gem in your project:
 
 ```ruby
+gem 'config-reader'
+```
+
+- Example usage:
+
+```ruby
+require 'config-reader'
 config = ConfigReader.load('path/to/config.yml', :production)
  
 config.api_host
