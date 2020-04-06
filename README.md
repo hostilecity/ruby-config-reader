@@ -38,3 +38,7 @@ config.example_api['host']
 config.example_api['sandbox']
 => false
 ```
+
+### Contribution
+
+Feel free to [submit issues](https://github.com/hostilecity/ruby-config-reader/issues) or [help make it better](https://github.com/hostilecity/ruby-config-reader/pulls). 
