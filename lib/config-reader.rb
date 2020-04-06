@@ -3,10 +3,13 @@ require 'erb'
 require 'ostruct'
 require 'yaml'
 
-class ConfigReader < OpenStruct
+class ConfigReader
+  # Process IO as ERB and then YAML
+  # and return results as OpenStruct
+  # @param [String] path
+  # @param [String,Symbol] env
+  # @return [OpenStruct]
   def self.load(path, env)
-    contents = IO.read(path)
-    processed = ERB.new(contents).result
-    new(YAML.load(processed)[env.to_s])
+    OpenStruct.new(YAML.load(ERB.new(IO.read(path)).result)[env.to_s])
   end
 end
