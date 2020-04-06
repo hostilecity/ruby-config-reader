@@ -3,7 +3,7 @@ $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
 require 'config-reader/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'power-rake'
+  s.name        = 'config-reader'
   s.version     = ConfigReader::VERSION
   s.required_ruby_version = Gem::Requirement.new('>= 2.4')
   s.authors     = ['Ryan Tulino']
