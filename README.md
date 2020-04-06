@@ -30,12 +30,12 @@ gem 'config-reader'
 
 ```ruby
 require 'config-reader'
-config = ConfigReader.load('path/to/config.yml', :production)
+reader = ConfigReader.new('path/to/config.yml', :production)
  
-config.example_api['host']
+reader.config.example_api['host']
 => https://example.com/
  
-config.example_api['sandbox']
+reader.config.example_api['sandbox']
 => false
 ```
 
